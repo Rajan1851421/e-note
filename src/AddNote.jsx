@@ -26,7 +26,7 @@ function AddNote() {
             note: note,
             title: title.toLowerCase()
         };
-        if (note) {
+        if (note && title) {
             setLoading(true)
             axios.post(`https://67209095cf285f60d77a49f6.mockapi.io/My_note`, requestData)
                 .then(response => {
